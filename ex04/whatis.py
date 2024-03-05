@@ -8,5 +8,5 @@ try:
     print(f"I'm {whatis}")
 except AssertionError as ae:
     print(f"AssertionError: {ae}")
-except ValueError as ve:
-    print(f"AssertionError: argument is not an integer")
+except ValueError:
+    print("AssertionError: argument is not an integer")
