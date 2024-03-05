@@ -8,7 +8,7 @@ def NULL_not_found(object: any) -> int:
         bool: lambda x: (print("Fake :", type(x)), 0)
     }
 
-    action = type_actions.get(type(object), lambda x: (print("Type not found"), 0))
+    action = type_actions.get(type(object), lambda x: (print("Type not found"), 1))
     result = action(object)[1]
 
     if result is None:
