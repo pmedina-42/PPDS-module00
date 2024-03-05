@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+    """tu puta madre"""
     punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
     try:
         if (len(sys.argv) == 1):

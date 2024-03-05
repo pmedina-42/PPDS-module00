@@ -3,6 +3,7 @@ from ft_filter import ft_filter
 
 
 def checker():
+    """tu puta madre checkeando"""
     pt = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
     assert not len(sys.argv) != 3, "the correct number of arguments is 2"
     assert sys.argv[2].isdigit, "second argument is not an integer"
@@ -10,6 +11,7 @@ def checker():
 
 
 def main():
+    """la main de tu puta madre 2.0"""
     try:
         checker()
         lst = sys.argv[1].split()
@@ -22,4 +24,5 @@ def main():
 
 
 if __name__ == "__main__":
+    """la main de tu puta madre"""
     main()
