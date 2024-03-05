@@ -30,11 +30,11 @@ def main():
         print(f"{spaces} spaces")
         print(f"{digits} digits")
     except AssertionError as ae:
-        print(f"AssertionError: {ae}")
-    except KeyboardInterrupt:
-        print("Ctrl+C pressed")
-    except EOFError:
-        print("Ctrl+D pressed")
+        print(f"{type(ae).__name__}: {ae}")
+    except KeyboardInterrupt as ki:
+        print(f"{type(ki).__name__}: Ctrl+C pressed")
+    except EOFError as eof:
+        print(f"{type(eof).__name__}: Ctrl+D pressed")
 
 
 if __name__ == "__main__":

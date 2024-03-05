@@ -20,7 +20,7 @@ def main():
         print(res)
 
     except AssertionError as ae:
-        print(f"AssertionError: {ae}")
+        print(f"{type(ae).__name__}: {ae}")
 
 
 if __name__ == "__main__":

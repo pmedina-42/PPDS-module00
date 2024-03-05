@@ -28,7 +28,7 @@ def main():
         morse_code = translate_to_morse(sys.argv[1])
         print(morse_code)
     except AssertionError as ae:
-        print(f"AssertionError: {ae}")
+        print(f"{type(ae).__name__}: {ae}")
 
 
 if __name__ == '__main__':
