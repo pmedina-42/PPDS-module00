@@ -31,6 +31,10 @@ def main():
         print(f"{digits} digits")
     except AssertionError as ae:
         print(f"AssertionError: {ae}")
+    except KeyboardInterrupt:
+        print("Ctrl+C pressed")
+    except EOFError:
+        print("Ctrl+D pressed")
 
 
 if __name__ == "__main__":
