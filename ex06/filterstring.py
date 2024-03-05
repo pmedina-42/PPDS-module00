@@ -17,7 +17,7 @@ def main():
         lst = sys.argv[1].split()
         num = int(sys.argv[2])
         res = ft_filter(lambda x: len(x) >= num, lst)
-        print(res)
+        print(list(res))
 
     except AssertionError as ae:
         print(f"{type(ae).__name__}: {ae}")
