@@ -3,27 +3,39 @@ import sys
 
 def main():
     """tu puta madre"""
+    upper = lower = punct = digits = spaces = 0
     punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
     try:
-        if (len(sys.argv) == 1):
-            s = input('What is the text to count?\n')
-        assert not len(sys.argv) > 2, "more than one argument provided"
-        if (len(sys.argv) == 2):
+        if len(sys.argv) == 1:
+            print("What is the text to count?")
+            s = ""
+            while True:
+                char = sys.stdin.read(1)
+                if char == '\n':
+                    s += ' '
+                elif char == '':
+                    spaces += 1
+                    break
+                else:
+                    s += char
+        else:
+            assert len(sys.argv) == 2, "more than one argument provided"
             s = sys.argv[1]
-        assert type(s) is str or type(s) is int, "provide a string"
-        upper = lower = punct = digits = spaces = 0
+        assert isinstance(s, (str, int)), "provide a string"
+        
         for c in s:
-            if (c.isupper()):
+            if c.isupper():
                 upper += 1
-            elif (c.islower()):
+            elif c.islower():
                 lower += 1
-            elif (c.isdigit()):
+            elif c.isdigit():
                 digits += 1
-            elif (c.isspace()):
-                spaces += 1
-            elif (c in punctuation):
+            elif c in punctuation:
                 punct += 1
-        print(f"The text contains {str(len(s))} characters:")
+            elif c.isspace() or c == '\n':
+                spaces += 1
+        
+        print(f"The text contains {len(s)} characters:")
         print(f"{upper} upper letters")
         print(f"{lower} lower letters")
         print(f"{punct} punctuation marks")
