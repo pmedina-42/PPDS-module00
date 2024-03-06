@@ -17,10 +17,14 @@ def main():
         lst = sys.argv[1].split()
         num = int(sys.argv[2])
         res = ft_filter(lambda x: len(x) >= num, lst)
-        print(list(res))
+        print(res)
 
     except AssertionError as ae:
         print(f"{type(ae).__name__}: {ae}")
+    except ValueError as ve:
+        print(f"{type(ve).__name__}: last argument is not an integer")
+    except Exception:
+        print("Random exception")
 
 
 if __name__ == "__main__":
