@@ -11,10 +11,9 @@ x = list(ft_tuple)
 x[1] = "Spain!"
 ft_tuple = tuple(x)
 
-# Set, also using list
-x = list(ft_set)
-x[1] = "Madrid!"
-ft_set = set(x)
+# Set, ez
+ft_set.remove("tata!")
+ft_set.add("Madrid!")
 
 # Dict, ez
 ft_dict['Hello'] = "42Madrid!"
