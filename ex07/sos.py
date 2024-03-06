@@ -17,6 +17,8 @@ def translate_to_morse(text):
     for char in text:
         if char.upper() in morse_dict:
             morse_code.append(morse_dict[char.upper()])
+        else:
+            raise AssertionError("character not in dictionary")
     return ' '.join(morse_code)
 
 
