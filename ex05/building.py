@@ -22,7 +22,7 @@ def main():
             assert len(sys.argv) == 2, "more than one argument provided"
             s = sys.argv[1]
         assert isinstance(s, (str, int)), "provide a string"
-        
+
         for c in s:
             if c.isupper():
                 upper += 1
@@ -34,7 +34,7 @@ def main():
                 punct += 1
             elif c.isspace() or c == '\n':
                 spaces += 1
-        
+
         print(f"The text contains {len(s)} characters:")
         print(f"{upper} upper letters")
         print(f"{lower} lower letters")
